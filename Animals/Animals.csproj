@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C0E2C8F-2460-4F0E-8672-022F3C0B3B3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Animals</RootNamespace>
+    <AssemblyName>Animals</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract animals\Animal.cs" />
+    <Compile Include="AnimalFactory.cs" />
+    <Compile Include="AnimalType.cs" />
+    <Compile Include="Abstract animals\Bird.cs" />
+    <Compile Include="Animals\Chimpanzee.cs" />
+    <Compile Include="Animals\Dingo.cs" />
+    <Compile Include="Animals\Eagle.cs" />
+    <Compile Include="Abstract animals\Fish.cs" />
+    <Compile Include="Animals\Hummingbird.cs" />
+    <Compile Include="BuryAndEatBoneBehavior.cs" />
+    <Compile Include="ClimbBehavior.cs" />
+    <Compile Include="ClimbProcess.cs" />
+    <Compile Include="ConsumeBehavior.cs" />
+    <Compile Include="FlyBehavior.cs" />
+    <Compile Include="GiveBirthBehavior.cs" />
+    <Compile Include="HoverBehavior.cs" />
+    <Compile Include="HoverProcess.cs" />
+    <Compile Include="IBirthBehavior.cs" />
+    <Compile Include="IEatBehavior.cs" />
+    <Compile Include="IHatchable.cs" />
+    <Compile Include="IMoveBehavior.cs" />
+    <Compile Include="IMover.cs" />
+    <Compile Include="Animals\Kangaroo.cs" />
+    <Compile Include="Abstract animals\Mammal.cs" />
+    <Compile Include="Animals\Ostrich.cs" />
+    <Compile Include="Animals\Platypus.cs" />
+    <Compile Include="LayEggBehavior.cs" />
+    <Compile Include="MoveBehaviorFactory.cs" />
+    <Compile Include="MoveBehaviorType.cs" />
+    <Compile Include="MoveHelper.cs" />
+    <Compile Include="NoMoveBehavior.cs" />
+    <Compile Include="PaceBehavior.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Animals\Shark.cs" />
+    <Compile Include="Animals\Squirrel.cs" />
+    <Compile Include="ShowAffectionBehavior.cs" />
+    <Compile Include="SwimBehavior.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CagedItems\CagedItems.csproj">
+      <Project>{31B44494-225B-4E61-AE24-412B65D86A21}</Project>
+      <Name>CagedItems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Foods\Foods.csproj">
+      <Project>{520ab7bd-096e-47a3-959e-b046bb8cf362}</Project>
+      <Name>Foods</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyCollectors\MoneyCollectors.csproj">
+      <Project>{572D16AE-1F78-477E-ABED-7D9AFF46517F}</Project>
+      <Name>MoneyCollectors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reproducers\Reproducers.csproj">
+      <Project>{8367933f-b6c3-4d7c-9b3f-a32c9751c739}</Project>
+      <Name>Reproducers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{CC863CBC-0B81-41E0-8B95-52C92990DFC3}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
